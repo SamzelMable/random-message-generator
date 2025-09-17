@@ -1,0 +1,118 @@
+:root {
+  --primary-bg: #121212;
+  --secondary-bg: #3D3D3D;
+  --light-gray: #A6A6A6;
+  --white: #F5F5F5;
+  --font-main: 'Fira Code', monospace;
+  --font-secondary: 'Open Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--primary-bg);
+  color: var(--white);
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--font-main);
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: var(--light-gray);
+  margin-bottom: 30px;
+}
+
+/* Message Card */
+.card {
+  background-color: var(--secondary-bg);
+  padding: 25px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+button {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+}
+
+/* Generate Button */
+#generateBtn {
+  background-color: var(--white);
+  color: var(--primary-bg);
+}
+
+#generateBtn:hover {
+  background-color: var(--light-gray);
+  transform: translateY(-2px);
+}
+
+/* Copy Button */
+#copyBtn {
+  background-color: #0288d1;
+  color: var(--white);
+}
+
+#copyBtn:hover {
+  background-color: #01579b;
+  transform: translateY(-2px);
+}
+
+/* Copy Status */
+#copyStatus {
+  display: none;
+  color: #00e676;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: var(--light-gray);
+}
